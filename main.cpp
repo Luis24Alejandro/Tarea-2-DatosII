@@ -2,10 +2,62 @@
 #include "Sorting Algorithms/Headers/BubbleSort.h"
 #include "Sorting Algorithms/Headers/SelectionSort.h"
 #include "Sorting Algorithms/Headers/MergeSort.h"
+
+
 #include "Data Structures/LinkedList/LinkedList.h"
 #include "Data Structures/BinaryTree/BinaryTree.h"
 
-int main() {
+
+#include <gtkmm.h>
+#include "Graficos/GraphWidget.h"
+
+
+#include "Time.h"
+
+
+
+int main(int argc, char *argv[]) {
+
+    // Inicializa la aplicación GTK
+    auto app = Gtk::Application::create(argc, argv, "app.de.graficos");
+
+    // Crea la ventana principal
+    Gtk::Window window;
+    window.set_title("Graficos");
+    window.set_default_size(500, 500);
+    window.set_size_request(450, 440);
+
+    // Crea un VBox para organizar los widgets
+    Gtk::Box vbox(Gtk::ORIENTATION_VERTICAL);
+    window.add(vbox);
+
+    // Crea un ComboBox para seleccionar la función
+    Gtk::ComboBoxText function_selector;
+    function_selector.append("Grafica de BubbleSort");
+    function_selector.append("Grafica de MergeSort");
+    function_selector.append("Grafica de SelectionSort");
+    function_selector.append("Grafica de BinaryTree");
+    function_selector.append("Grafica de LinkedList");
+
+
+    // Agrega más opciones aquí
+    function_selector.set_active(0); // Selecciona la primera opción por defecto
+    vbox.pack_start(function_selector, Gtk::PACK_SHRINK);
+
+
+    // Crea el widget de gráfico
+    GraphWidget graph_widget;
+    vbox.pack_start(graph_widget);
+
+    // Conecta la señal de cambio de selección
+    function_selector.signal_changed().connect([&]() {
+        int selected_index = function_selector.get_active_row_number();
+        graph_widget.set_function(selected_index); // Cambia la función a graficar
+    });
+
+
+
+
     //------------ Bubble Sort ------------
     // Crea el array que se va a ordenar
     int arrayB[] = {64, 34, 25, 12, 22, 11, 90};
@@ -22,6 +74,8 @@ int main() {
         std::cout << arrayB[i] << " ";
     // Mete un salto de linea al final
     std::cout << std::endl;
+    //------------ Bubble Sort ------------
+
 
 
     //------------ Selection Sort ------------
@@ -40,6 +94,7 @@ int main() {
         std::cout << arrayS[i] << " ";
     // Mete un salto de linea al final
     std::cout << std::endl;
+    //------------ Selection Sort ------------
 
 
     //------------ Merge Sort ------------
@@ -58,6 +113,7 @@ int main() {
         std::cout << arrayM[i] << " ";
     // Mete un salto de linea al final
     std::cout << std::endl;
+    //------------ Merge Sort ------------
 
 
     //------------ Linked List ------------
@@ -82,10 +138,12 @@ int main() {
     catch (const std::out_of_range& e) {
         std::cerr << e.what() << std::endl;
     }
+    //------------ Linked List ------------
 
-
-    std::cout << "Binary Tree: ";
     //------------ Binary Tree ------------
+
+    std::cout << std::endl;
+    std::cout << "Binary Tree: ";
 
     BinaryTree biTree; // Crea un nuevo árbol binario
 
@@ -99,13 +157,17 @@ int main() {
     biTree.insert(9);
 
     // Mostrar los recorridos
-    std::cout << "Inorder traversal: ";
+    std::cout << "Reccorrido: ";
     biTree.inorder(); // Muestra en orden
 
+    //------------ Binary Tree ------------
 
+    // Muestra el gráfico
+    graph_widget.show();
 
+    vbox.show_all();
 
-
-return 0;
+//Ejecuta GTK
+return app->run(window);
 
 }
