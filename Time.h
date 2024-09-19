@@ -1,20 +1,15 @@
 #ifndef TIME_H
 #define TIME_H
 
-#include "Sorting Algorithms/Headers/SelectionSort.h"
-#include "Sorting Algorithms/Headers/MergeSort.h"
-#include "Sorting Algorithms/Headers/BubbleSort.h"
-
 #include <chrono>
-#include <vector>
-#include <stdexcept>
-
-
+#include <functional>
 
 template <typename Func, typename... Args>
-long long getSystemTimeNano(Func func, Args&&... args);
+long long measureTime(Func func, Args&&... args) {
+    auto start = std::chrono::high_resolution_clock::now();
+    func(std::forward<Args>(args)...);
+    auto end = std::chrono::high_resolution_clock::now();
+    return std::chrono::duration_cast<std::chrono::microseconds>(end - start).count(); // Tiempo en microsegundos
+}
 
-#endif //TIME_H
-
-
-
+#endif // TIME_H
