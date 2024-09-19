@@ -57,6 +57,46 @@ build CMakeFiles/Tarea__2_DatosII_.dir/main.cpp.o: CXX_COMPILER__Tarea__2_DatosI
   TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
   TARGET_PDB = Tarea__2_DatosII_.pdb
 
+build CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/BubbleSort.cpp.o: CXX_COMPILER__Tarea__2_DatosII__unscanned_Debug /home/luis24/Escritorio/Tarea$ #2$ DatosII$ /Sorting$ Algorithms/BubbleSort.cpp || cmake_object_order_depends_target_Tarea__2_DatosII_
+  DEP_FILE = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/BubbleSort.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
+  OBJECT_FILE_DIR = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms
+  TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
+  TARGET_PDB = Tarea__2_DatosII_.pdb
+
+build CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/SelectionSort.cpp.o: CXX_COMPILER__Tarea__2_DatosII__unscanned_Debug /home/luis24/Escritorio/Tarea$ #2$ DatosII$ /Sorting$ Algorithms/SelectionSort.cpp || cmake_object_order_depends_target_Tarea__2_DatosII_
+  DEP_FILE = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/SelectionSort.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
+  OBJECT_FILE_DIR = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms
+  TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
+  TARGET_PDB = Tarea__2_DatosII_.pdb
+
+build CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/MergeSort.cpp.o: CXX_COMPILER__Tarea__2_DatosII__unscanned_Debug /home/luis24/Escritorio/Tarea$ #2$ DatosII$ /Sorting$ Algorithms/MergeSort.cpp || cmake_object_order_depends_target_Tarea__2_DatosII_
+  DEP_FILE = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/MergeSort.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
+  OBJECT_FILE_DIR = CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms
+  TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
+  TARGET_PDB = Tarea__2_DatosII_.pdb
+
+build CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/LinkedList/LinkedList.cpp.o: CXX_COMPILER__Tarea__2_DatosII__unscanned_Debug /home/luis24/Escritorio/Tarea$ #2$ DatosII$ /Data$ Structures/LinkedList/LinkedList.cpp || cmake_object_order_depends_target_Tarea__2_DatosII_
+  DEP_FILE = CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/LinkedList/LinkedList.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
+  OBJECT_FILE_DIR = CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/LinkedList
+  TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
+  TARGET_PDB = Tarea__2_DatosII_.pdb
+
+build CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/BinaryTree/BinaryTree.cpp.o: CXX_COMPILER__Tarea__2_DatosII__unscanned_Debug /home/luis24/Escritorio/Tarea$ #2$ DatosII$ /Data$ Structures/BinaryTree/BinaryTree.cpp || cmake_object_order_depends_target_Tarea__2_DatosII_
+  DEP_FILE = CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/BinaryTree/BinaryTree.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
+  OBJECT_FILE_DIR = CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/BinaryTree
+  TARGET_COMPILE_PDB = CMakeFiles/Tarea__2_DatosII_.dir/
+  TARGET_PDB = Tarea__2_DatosII_.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Tarea__2_DatosII_
@@ -65,7 +105,7 @@ build CMakeFiles/Tarea__2_DatosII_.dir/main.cpp.o: CXX_COMPILER__Tarea__2_DatosI
 #############################################
 # Link the executable Tarea__2_DatosII_
 
-build Tarea__2_DatosII_: CXX_EXECUTABLE_LINKER__Tarea__2_DatosII__Debug CMakeFiles/Tarea__2_DatosII_.dir/main.cpp.o
+build Tarea__2_DatosII_: CXX_EXECUTABLE_LINKER__Tarea__2_DatosII__Debug CMakeFiles/Tarea__2_DatosII_.dir/main.cpp.o CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/BubbleSort.cpp.o CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/SelectionSort.cpp.o CMakeFiles/Tarea__2_DatosII_.dir/Sorting_Algorithms/MergeSort.cpp.o CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/LinkedList/LinkedList.cpp.o CMakeFiles/Tarea__2_DatosII_.dir/Data_Structures/BinaryTree/BinaryTree.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Tarea__2_DatosII_.dir
   POST_BUILD = :
